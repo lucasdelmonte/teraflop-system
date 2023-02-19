@@ -1,0 +1,29 @@
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\CASOS DE USO.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\CASOS DE USO.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\obj\Debug\CASOS DE USO.csproj.AssemblyReference.cache
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\obj\Debug\CASOS DE USO.csproj.CoreCompileInputs.cache
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\obj\Debug\CASOS DE USO.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\obj\Debug\CASOS DE USO.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\CASOS DE USO.dll.config
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\EntityFramework.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\EntityFramework.xml
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\obj\Debug\CASOS DE USO.csproj.CopyComplete
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\CONTEXTO.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\MODELO.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\CONTEXTO.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\CONTEXTO.dll.config
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\MODELO.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\MODELO.dll.config
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.xml
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\CASOS DE USO\bin\Debug\Newtonsoft.Json.xml

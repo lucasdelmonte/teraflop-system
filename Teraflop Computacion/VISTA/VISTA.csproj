@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F37A228-4778-4FD7-9D1C-EEE73AECE273}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VISTA</RootNamespace>
+    <AssemblyName>VISTA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>..\..\..\..\..\2 - Primer cuatrimestre - 2021\Lenguajes de Prog. para la Administración\Diseño\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\2 - Primer cuatrimestre - 2021\Lenguajes de Prog. para la Administración\Diseño\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audits\frmAudits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audits\frmAudits.Designer.cs">
+      <DependentUpon>frmAudits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audits\frmCustomerAud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audits\frmCustomerAud.Designer.cs">
+      <DependentUpon>frmCustomerAud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buys\frmBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buys\frmBuy.Designer.cs">
+      <DependentUpon>frmBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buys\frmBuys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buys\frmBuys.Designer.cs">
+      <DependentUpon>frmBuys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buys\frmDeliveries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buys\frmDeliveries.Designer.cs">
+      <DependentUpon>frmDeliveries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buys\frmDetailDeliveries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buys\frmDetailDeliveries.Designer.cs">
+      <DependentUpon>frmDetailDeliveries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buys\frmEditBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buys\frmEditBuy.Designer.cs">
+      <DependentUpon>frmEditBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\frmCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\frmCategories.Designer.cs">
+      <DependentUpon>frmCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsFactura.cs" />
+    <Compile Include="Customers\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomers.Designer.cs">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marks\frmMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marks\frmMark.Designer.cs">
+      <DependentUpon>frmMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marks\frmMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marks\frmMarks.Designer.cs">
+      <DependentUpon>frmMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\frmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\frmModel.Designer.cs">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\frmModels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\frmModels.Designer.cs">
+      <DependentUpon>frmModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmBuy.Designer.cs">
+      <DependentUpon>frmDeleteConfirmBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmCategory.Designer.cs">
+      <DependentUpon>frmDeleteConfirmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmCustomer.Designer.cs">
+      <DependentUpon>frmDeleteConfirmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmMark.Designer.cs">
+      <DependentUpon>frmDeleteConfirmMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmModel.Designer.cs">
+      <DependentUpon>frmDeleteConfirmModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmProduct.Designer.cs">
+      <DependentUpon>frmDeleteConfirmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmProvider.Designer.cs">
+      <DependentUpon>frmDeleteConfirmProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmSale.Designer.cs">
+      <DependentUpon>frmDeleteConfirmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmDeleteConfirmUser.Designer.cs">
+      <DependentUpon>frmDeleteConfirmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorAmount.Designer.cs">
+      <DependentUpon>frmErrorAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedCategory.Designer.cs">
+      <DependentUpon>frmErrorDeletedCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedCustomer.Designer.cs">
+      <DependentUpon>frmErrorDeletedCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedMark.Designer.cs">
+      <DependentUpon>frmErrorDeletedMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedModel.Designer.cs">
+      <DependentUpon>frmErrorDeletedModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedProduct.Designer.cs">
+      <DependentUpon>frmErrorDeletedProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeletedUser.Designer.cs">
+      <DependentUpon>frmErrorDeletedUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeliveryAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDeliveryAmount.Designer.cs">
+      <DependentUpon>frmErrorDeliveryAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDgvVoid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorDgvVoid.Designer.cs">
+      <DependentUpon>frmErrorDgvVoid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorIncorrect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorIncorrect.Designer.cs">
+      <DependentUpon>frmErrorIncorrect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorLogin.Designer.cs">
+      <DependentUpon>frmErrorLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorNoCategoryRelated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorNoCategoryRelated.Designer.cs">
+      <DependentUpon>frmErrorNoCategoryRelated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorNotDeliveries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorNotDeliveries.Designer.cs">
+      <DependentUpon>frmErrorNotDeliveries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorOutRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorOutRange.Designer.cs">
+      <DependentUpon>frmErrorOutRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorSelectedGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorSelectedGrid.Designer.cs">
+      <DependentUpon>frmErrorSelectedGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorUnexpected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorUnexpected.Designer.cs">
+      <DependentUpon>frmErrorUnexpected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorUserFound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorUserFound.Designer.cs">
+      <DependentUpon>frmErrorUserFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorUsername.Designer.cs">
+      <DependentUpon>frmErrorUsername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorVoid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorVoid.Designer.cs">
+      <DependentUpon>frmErrorVoid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorVoidGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorVoidGrid.Designer.cs">
+      <DependentUpon>frmErrorVoidGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmErrorWrongStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmErrorWrongStock.Designer.cs">
+      <DependentUpon>frmErrorWrongStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmExitApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmExitApplication.Designer.cs">
+      <DependentUpon>frmExitApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmRecoverPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmRecoverPassword.Designer.cs">
+      <DependentUpon>frmRecoverPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\frmSuccessfully.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications\frmSuccessfully.Designer.cs">
+      <DependentUpon>frmSuccessfully.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmUpdateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmUpdateStock.Designer.cs">
+      <DependentUpon>frmUpdateStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\frmEditProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Providers\frmEditProvider.Designer.cs">
+      <DependentUpon>frmEditProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\frmProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Providers\frmProvider.Designer.cs">
+      <DependentUpon>frmProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\frmProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Providers\frmProviders.Designer.cs">
+      <DependentUpon>frmProviders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmEditSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmEditSale.Designer.cs">
+      <DependentUpon>frmEditSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSale.Designer.cs">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Audits\frmAudits.resx">
+      <DependentUpon>frmAudits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audits\frmCustomerAud.resx">
+      <DependentUpon>frmCustomerAud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buys\frmBuy.resx">
+      <DependentUpon>frmBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buys\frmBuys.resx">
+      <DependentUpon>frmBuys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buys\frmDeliveries.resx">
+      <DependentUpon>frmDeliveries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buys\frmDetailDeliveries.resx">
+      <DependentUpon>frmDetailDeliveries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buys\frmEditBuy.resx">
+      <DependentUpon>frmEditBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories\frmCategories.resx">
+      <DependentUpon>frmCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomers.resx">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marks\frmMark.resx">
+      <DependentUpon>frmMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marks\frmMarks.resx">
+      <DependentUpon>frmMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\frmModel.resx">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\frmModels.resx">
+      <DependentUpon>frmModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmBuy.resx">
+      <DependentUpon>frmDeleteConfirmBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmCategory.resx">
+      <DependentUpon>frmDeleteConfirmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmCustomer.resx">
+      <DependentUpon>frmDeleteConfirmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmMark.resx">
+      <DependentUpon>frmDeleteConfirmMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmModel.resx">
+      <DependentUpon>frmDeleteConfirmModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmProduct.resx">
+      <DependentUpon>frmDeleteConfirmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmProvider.resx">
+      <DependentUpon>frmDeleteConfirmProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmSale.resx">
+      <DependentUpon>frmDeleteConfirmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmDeleteConfirmUser.resx">
+      <DependentUpon>frmDeleteConfirmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorAmount.resx">
+      <DependentUpon>frmErrorAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeletedCategory.resx">
+      <DependentUpon>frmErrorDeletedCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeletedCustomer.resx">
+      <DependentUpon>frmErrorDeletedCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeletedMark.resx">
+      <DependentUpon>frmErrorDeletedMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeletedModel.resx">
+      <DependentUpon>frmErrorDeletedModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeletedProduct.resx">
+      <DependentUpon>frmErrorDeletedProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeletedUser.resx">
+      <DependentUpon>frmErrorDeletedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDeliveryAmount.resx">
+      <DependentUpon>frmErrorDeliveryAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorDgvVoid.resx">
+      <DependentUpon>frmErrorDgvVoid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorIncorrect.resx">
+      <DependentUpon>frmErrorIncorrect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorLogin.resx">
+      <DependentUpon>frmErrorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorNoCategoryRelated.resx">
+      <DependentUpon>frmErrorNoCategoryRelated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorNotDeliveries.resx">
+      <DependentUpon>frmErrorNotDeliveries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorOutRange.resx">
+      <DependentUpon>frmErrorOutRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorSelectedGrid.resx">
+      <DependentUpon>frmErrorSelectedGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorUnexpected.resx">
+      <DependentUpon>frmErrorUnexpected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorUserFound.resx">
+      <DependentUpon>frmErrorUserFound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorUsername.resx">
+      <DependentUpon>frmErrorUsername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorVoid.resx">
+      <DependentUpon>frmErrorVoid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorVoidGrid.resx">
+      <DependentUpon>frmErrorVoidGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmErrorWrongStock.resx">
+      <DependentUpon>frmErrorWrongStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmExitApplication.resx">
+      <DependentUpon>frmExitApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmRecoverPassword.resx">
+      <DependentUpon>frmRecoverPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\frmSuccessfully.resx">
+      <DependentUpon>frmSuccessfully.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmUpdateStock.resx">
+      <DependentUpon>frmUpdateStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Providers\frmEditProvider.resx">
+      <DependentUpon>frmEditProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Providers\frmProvider.resx">
+      <DependentUpon>frmProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Providers\frmProviders.resx">
+      <DependentUpon>frmProviders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmEditSale.resx">
+      <DependentUpon>frmEditSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSale.resx">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MODELO.Buy.datasource" />
+    <None Include="Properties\DataSources\MODELO.Category.datasource" />
+    <None Include="Properties\DataSources\MODELO.Customer.datasource" />
+    <None Include="Properties\DataSources\MODELO.Delivery.datasource" />
+    <None Include="Properties\DataSources\MODELO.DetailBuy.datasource" />
+    <None Include="Properties\DataSources\MODELO.DetailSale.datasource" />
+    <None Include="Properties\DataSources\MODELO.Mark.datasource" />
+    <None Include="Properties\DataSources\MODELO.Model.datasource" />
+    <None Include="Properties\DataSources\MODELO.Product.datasource" />
+    <None Include="Properties\DataSources\MODELO.Provider.datasource" />
+    <None Include="Properties\DataSources\MODELO.Sale.datasource" />
+    <None Include="Properties\DataSources\MODELO.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CASOS DE USO\CASOS DE USO.csproj">
+      <Project>{9409267a-af16-4824-b53b-a70d5b6cf237}</Project>
+      <Name>CASOS DE USO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CONTEXTO\CONTEXTO.csproj">
+      <Project>{6e096f28-a7ca-43ae-a6ad-fbe393863f02}</Project>
+      <Name>CONTEXTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CONTROLADORA\CONTROLADORA.csproj">
+      <Project>{aa6c500c-7fcb-422e-aab4-7c946a891289}</Project>
+      <Name>CONTROLADORA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODELO\MODELO.csproj">
+      <Project>{49e368b2-c0b4-48be-a8d3-9d7ea790011e}</Project>
+      <Name>MODELO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
