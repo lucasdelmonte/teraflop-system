@@ -184,3 +184,8 @@ C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de
 C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\bin\Debug\Newtonsoft.Json.dll
 C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\bin\Debug\Newtonsoft.Json.xml
 C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmSuccessfully.resources
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Backup.frmBackup.resources
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmErrorBackupName.resources
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmErrorRestoreName.resources
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmSuccessfullyBackup.resources
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmSuccessfullyRestoreBackup.resources

@@ -20,6 +20,7 @@ using VISTA.Reports;
 using BunifuAnimatorNS;
 using VISTA.Audits;
 using System.Globalization;
+using VISTA.Backup;
 
 namespace VISTA
 {
@@ -584,6 +585,25 @@ namespace VISTA
         private void trLoad_Tick(object sender, EventArgs e)
         {
             cont++;
+        }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmBackup formBackup = new frmBackup();
+                formBackup.ShowDialog();
+            }
+            catch (Exception)
+            {
+                DialogResult result = new DialogResult();
+                frmErrorUnexpected formErrorUnexpected = new frmErrorUnexpected();
+                result = formErrorUnexpected.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    return;
+                }
+            }
         }
     }
 }
