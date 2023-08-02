@@ -39,16 +39,18 @@ namespace VISTA.Backup
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.gbSaveBackup = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnConectar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtBackupName = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRouteRestore = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnRestore = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtPathRestore = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnConectar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnRestore = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnRouteRestore = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
@@ -119,6 +121,8 @@ namespace VISTA.Backup
             // 
             // gbSaveBackup
             // 
+            this.gbSaveBackup.Controls.Add(this.bunifuCustomLabel1);
+            this.gbSaveBackup.Controls.Add(this.label2);
             this.gbSaveBackup.Controls.Add(this.btnConectar);
             this.gbSaveBackup.Controls.Add(this.txtBackupName);
             this.gbSaveBackup.Controls.Add(this.pictureBox4);
@@ -132,18 +136,63 @@ namespace VISTA.Backup
             this.gbSaveBackup.TabStop = false;
             this.gbSaveBackup.Text = "Create backup";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(6, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(258, 24);
+            this.label2.TabIndex = 116;
+            this.label2.Text = "Example: TeraflopSystemDD-MM-YY";
+            // 
+            // btnConectar
+            // 
+            this.btnConectar.Activecolor = System.Drawing.Color.Transparent;
+            this.btnConectar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnConectar.BackColor = System.Drawing.Color.Transparent;
+            this.btnConectar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConectar.BorderRadius = 0;
+            this.btnConectar.ButtonText = "Create";
+            this.btnConectar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConectar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnConectar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConectar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnConectar.Iconimage")));
+            this.btnConectar.Iconimage_right = null;
+            this.btnConectar.Iconimage_right_Selected = null;
+            this.btnConectar.Iconimage_Selected = null;
+            this.btnConectar.IconMarginLeft = 0;
+            this.btnConectar.IconMarginRight = 0;
+            this.btnConectar.IconRightVisible = true;
+            this.btnConectar.IconRightZoom = 0D;
+            this.btnConectar.IconVisible = true;
+            this.btnConectar.IconZoom = 50D;
+            this.btnConectar.IsTab = false;
+            this.btnConectar.Location = new System.Drawing.Point(386, 96);
+            this.btnConectar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnConectar.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnConectar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnConectar.selected = false;
+            this.btnConectar.Size = new System.Drawing.Size(108, 43);
+            this.btnConectar.TabIndex = 115;
+            this.btnConectar.Text = "Create";
+            this.btnConectar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConectar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.btnConectar.TextFont = new System.Drawing.Font("Consolas", 11.75F);
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
             // txtBackupName
             // 
             this.txtBackupName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBackupName.BackColor = System.Drawing.Color.Silver;
             this.txtBackupName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBackupName.Enabled = false;
             this.txtBackupName.Font = new System.Drawing.Font("Alata", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBackupName.ForeColor = System.Drawing.Color.White;
             this.txtBackupName.Location = new System.Drawing.Point(120, 51);
             this.txtBackupName.Name = "txtBackupName";
-            this.txtBackupName.ReadOnly = true;
             this.txtBackupName.Size = new System.Drawing.Size(353, 23);
             this.txtBackupName.TabIndex = 91;
             this.txtBackupName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -174,6 +223,80 @@ namespace VISTA.Backup
             this.groupBox1.TabIndex = 103;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Restore backup";
+            // 
+            // btnRouteRestore
+            // 
+            this.btnRouteRestore.Activecolor = System.Drawing.Color.Transparent;
+            this.btnRouteRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRouteRestore.BackColor = System.Drawing.Color.Transparent;
+            this.btnRouteRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRouteRestore.BorderRadius = 0;
+            this.btnRouteRestore.ButtonText = "Route";
+            this.btnRouteRestore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRouteRestore.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRouteRestore.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRouteRestore.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRouteRestore.Iconimage")));
+            this.btnRouteRestore.Iconimage_right = null;
+            this.btnRouteRestore.Iconimage_right_Selected = null;
+            this.btnRouteRestore.Iconimage_Selected = null;
+            this.btnRouteRestore.IconMarginLeft = 0;
+            this.btnRouteRestore.IconMarginRight = 0;
+            this.btnRouteRestore.IconRightVisible = true;
+            this.btnRouteRestore.IconRightZoom = 0D;
+            this.btnRouteRestore.IconVisible = true;
+            this.btnRouteRestore.IconZoom = 50D;
+            this.btnRouteRestore.IsTab = false;
+            this.btnRouteRestore.Location = new System.Drawing.Point(396, 47);
+            this.btnRouteRestore.Margin = new System.Windows.Forms.Padding(7, 20, 7, 20);
+            this.btnRouteRestore.Name = "btnRouteRestore";
+            this.btnRouteRestore.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnRouteRestore.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnRouteRestore.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRouteRestore.selected = false;
+            this.btnRouteRestore.Size = new System.Drawing.Size(98, 38);
+            this.btnRouteRestore.TabIndex = 117;
+            this.btnRouteRestore.Text = "Route";
+            this.btnRouteRestore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRouteRestore.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.btnRouteRestore.TextFont = new System.Drawing.Font("Consolas", 11.75F);
+            this.btnRouteRestore.Click += new System.EventHandler(this.btnRouteRestore_Click);
+            // 
+            // btnRestore
+            // 
+            this.btnRestore.Activecolor = System.Drawing.Color.Transparent;
+            this.btnRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRestore.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRestore.BorderRadius = 0;
+            this.btnRestore.ButtonText = "Restore";
+            this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestore.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRestore.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRestore.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRestore.Iconimage")));
+            this.btnRestore.Iconimage_right = null;
+            this.btnRestore.Iconimage_right_Selected = null;
+            this.btnRestore.Iconimage_Selected = null;
+            this.btnRestore.IconMarginLeft = 0;
+            this.btnRestore.IconMarginRight = 0;
+            this.btnRestore.IconRightVisible = true;
+            this.btnRestore.IconRightZoom = 0D;
+            this.btnRestore.IconVisible = true;
+            this.btnRestore.IconZoom = 50D;
+            this.btnRestore.IsTab = false;
+            this.btnRestore.Location = new System.Drawing.Point(377, 130);
+            this.btnRestore.Margin = new System.Windows.Forms.Padding(5, 11, 5, 11);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnRestore.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnRestore.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRestore.selected = false;
+            this.btnRestore.Size = new System.Drawing.Size(120, 39);
+            this.btnRestore.TabIndex = 116;
+            this.btnRestore.Text = "Restore";
+            this.btnRestore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRestore.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.btnRestore.TextFont = new System.Drawing.Font("Consolas", 11.75F);
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // txtPathRestore
             // 
@@ -256,116 +379,14 @@ namespace VISTA.Backup
             this.btnBack.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnConectar
+            // bunifuCustomLabel1
             // 
-            this.btnConectar.Activecolor = System.Drawing.Color.Transparent;
-            this.btnConectar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnConectar.BackColor = System.Drawing.Color.Transparent;
-            this.btnConectar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnConectar.BorderRadius = 0;
-            this.btnConectar.ButtonText = "Create";
-            this.btnConectar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConectar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnConectar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnConectar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnConectar.Iconimage")));
-            this.btnConectar.Iconimage_right = null;
-            this.btnConectar.Iconimage_right_Selected = null;
-            this.btnConectar.Iconimage_Selected = null;
-            this.btnConectar.IconMarginLeft = 0;
-            this.btnConectar.IconMarginRight = 0;
-            this.btnConectar.IconRightVisible = true;
-            this.btnConectar.IconRightZoom = 0D;
-            this.btnConectar.IconVisible = true;
-            this.btnConectar.IconZoom = 50D;
-            this.btnConectar.IsTab = false;
-            this.btnConectar.Location = new System.Drawing.Point(386, 96);
-            this.btnConectar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnConectar.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btnConectar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnConectar.selected = false;
-            this.btnConectar.Size = new System.Drawing.Size(108, 43);
-            this.btnConectar.TabIndex = 115;
-            this.btnConectar.Text = "Create";
-            this.btnConectar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConectar.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.btnConectar.TextFont = new System.Drawing.Font("Consolas", 11.75F);
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
-            // btnRestore
-            // 
-            this.btnRestore.Activecolor = System.Drawing.Color.Transparent;
-            this.btnRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRestore.BackColor = System.Drawing.Color.Transparent;
-            this.btnRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRestore.BorderRadius = 0;
-            this.btnRestore.ButtonText = "Restore";
-            this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestore.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRestore.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRestore.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRestore.Iconimage")));
-            this.btnRestore.Iconimage_right = null;
-            this.btnRestore.Iconimage_right_Selected = null;
-            this.btnRestore.Iconimage_Selected = null;
-            this.btnRestore.IconMarginLeft = 0;
-            this.btnRestore.IconMarginRight = 0;
-            this.btnRestore.IconRightVisible = true;
-            this.btnRestore.IconRightZoom = 0D;
-            this.btnRestore.IconVisible = true;
-            this.btnRestore.IconZoom = 50D;
-            this.btnRestore.IsTab = false;
-            this.btnRestore.Location = new System.Drawing.Point(377, 130);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(5, 11, 5, 11);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnRestore.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btnRestore.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRestore.selected = false;
-            this.btnRestore.Size = new System.Drawing.Size(120, 39);
-            this.btnRestore.TabIndex = 116;
-            this.btnRestore.Text = "Restore";
-            this.btnRestore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRestore.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.btnRestore.TextFont = new System.Drawing.Font("Consolas", 11.75F);
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
-            // 
-            // btnRouteRestore
-            // 
-            this.btnRouteRestore.Activecolor = System.Drawing.Color.Transparent;
-            this.btnRouteRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRouteRestore.BackColor = System.Drawing.Color.Transparent;
-            this.btnRouteRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRouteRestore.BorderRadius = 0;
-            this.btnRouteRestore.ButtonText = "Route";
-            this.btnRouteRestore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRouteRestore.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRouteRestore.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRouteRestore.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRouteRestore.Iconimage")));
-            this.btnRouteRestore.Iconimage_right = null;
-            this.btnRouteRestore.Iconimage_right_Selected = null;
-            this.btnRouteRestore.Iconimage_Selected = null;
-            this.btnRouteRestore.IconMarginLeft = 0;
-            this.btnRouteRestore.IconMarginRight = 0;
-            this.btnRouteRestore.IconRightVisible = true;
-            this.btnRouteRestore.IconRightZoom = 0D;
-            this.btnRouteRestore.IconVisible = true;
-            this.btnRouteRestore.IconZoom = 50D;
-            this.btnRouteRestore.IsTab = false;
-            this.btnRouteRestore.Location = new System.Drawing.Point(396, 47);
-            this.btnRouteRestore.Margin = new System.Windows.Forms.Padding(7, 20, 7, 20);
-            this.btnRouteRestore.Name = "btnRouteRestore";
-            this.btnRouteRestore.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnRouteRestore.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btnRouteRestore.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRouteRestore.selected = false;
-            this.btnRouteRestore.Size = new System.Drawing.Size(98, 38);
-            this.btnRouteRestore.TabIndex = 117;
-            this.btnRouteRestore.Text = "Route";
-            this.btnRouteRestore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRouteRestore.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.btnRouteRestore.TextFont = new System.Drawing.Font("Consolas", 11.75F);
-            this.btnRouteRestore.Click += new System.EventHandler(this.btnRouteRestore_Click);
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(191, 69);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(147, 24);
+            this.bunifuCustomLabel1.TabIndex = 117;
+            this.bunifuCustomLabel1.Text = "bunifuCustomLabel1";
             // 
             // frmBackup
             // 
@@ -417,5 +438,7 @@ namespace VISTA.Backup
         private Bunifu.Framework.UI.BunifuFlatButton btnRouteRestore;
         private Bunifu.Framework.UI.BunifuFlatButton btnRestore;
         private Bunifu.Framework.UI.BunifuFlatButton btnConectar;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

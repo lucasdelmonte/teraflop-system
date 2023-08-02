@@ -54,6 +54,7 @@ namespace VISTA.Audits
             this.btnCustomers = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblName = new System.Windows.Forms.Label();
             this.btnLoginLogout = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblSelected = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
@@ -329,6 +330,7 @@ namespace VISTA.Audits
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(70)))));
+            this.panel1.Controls.Add(this.lblSelected);
             this.panel1.Controls.Add(this.btnCustomers);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.btnLoginLogout);
@@ -423,6 +425,17 @@ namespace VISTA.Audits
             this.btnLoginLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnLoginLogout.Click += new System.EventHandler(this.btnLoginLogout_Click);
             // 
+            // lblSelected
+            // 
+            this.lblSelected.AutoSize = true;
+            this.lblSelected.Font = new System.Drawing.Font("Alata", 12F);
+            this.lblSelected.ForeColor = System.Drawing.Color.White;
+            this.lblSelected.Location = new System.Drawing.Point(3, 550);
+            this.lblSelected.Name = "lblSelected";
+            this.lblSelected.Size = new System.Drawing.Size(73, 27);
+            this.lblSelected.TabIndex = 62;
+            this.lblSelected.Text = "Selected";
+            // 
             // frmAudits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,5 +485,6 @@ namespace VISTA.Audits
         private Bunifu.Framework.UI.BunifuFlatButton btnLoginLogout;
         private Bunifu.Framework.UI.BunifuFlatButton btnCustomers;
         private System.Windows.Forms.Label lblName;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblSelected;
     }
 }

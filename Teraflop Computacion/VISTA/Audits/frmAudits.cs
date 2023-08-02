@@ -18,6 +18,7 @@ namespace VISTA.Audits
         CONTROLADORA.LoginLogoutAuds cLoginLogoutAuds;
         CONTEXTO.TeraflopSystem ctxTeraflop;
         MODELO.CustomerAud oCustomerAud;
+        MODELO.LoginLogoutAud oLoginLogoutAud;
         #endregion
 
         #region constructor
@@ -97,6 +98,7 @@ namespace VISTA.Audits
         private void btnCustomers_Click(object sender, EventArgs e)
         {
             Update_CustomerAudDatagrid();
+            lblSelected.Text = "customer";
         }
 
         private void btnConsult_Click(object sender, EventArgs e)
@@ -114,13 +116,29 @@ namespace VISTA.Audits
 
             try
             {
-                oCustomerAud = (MODELO.CustomerAud)dgvAudits.CurrentRow.DataBoundItem;
-                frmCustomerAud formCustomerAud = new frmCustomerAud(oCustomerAud);
-                DialogResult result = formCustomerAud.ShowDialog();
-                if (result == DialogResult.OK)
+                if(lblSelected.Text == "customer")
                 {
+                    oCustomerAud = (MODELO.CustomerAud)dgvAudits.CurrentRow.DataBoundItem;
+                    frmCustomerAud formCustomerAud = new frmCustomerAud(oCustomerAud);
+                    DialogResult result = formCustomerAud.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        return;
+                    }
                     return;
                 }
+                if (lblSelected.Text == "login/logout")
+                {
+                    oLoginLogoutAud = (MODELO.LoginLogoutAud)dgvAudits.CurrentRow.DataBoundItem;
+                    frmLoginLogoutAud formLoginLogoutAud = new frmLoginLogoutAud(oLoginLogoutAud);
+                    DialogResult result = formLoginLogoutAud.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        return;
+                    }
+                    return;
+                }
+
             }
             catch (Exception)
             {
@@ -137,6 +155,7 @@ namespace VISTA.Audits
         private void btnLoginLogout_Click(object sender, EventArgs e)
         {
             Update_LoginLogoutAudDatagrid();
+            lblSelected.Text = "login/logout";
         }
     }
 }

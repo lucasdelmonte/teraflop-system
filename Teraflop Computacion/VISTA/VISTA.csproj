@@ -94,6 +94,12 @@
     <Compile Include="Audits\frmCustomerAud.Designer.cs">
       <DependentUpon>frmCustomerAud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Audits\frmLoginLogoutAud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audits\frmLoginLogoutAud.Designer.cs">
+      <DependentUpon>frmLoginLogoutAud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Backup\DatabaseFileList.cs" />
     <Compile Include="Backup\frmBackup.cs">
       <SubType>Form</SubType>
@@ -493,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Audits\frmCustomerAud.resx">
       <DependentUpon>frmCustomerAud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audits\frmLoginLogoutAud.resx">
+      <DependentUpon>frmLoginLogoutAud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Backup\frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>

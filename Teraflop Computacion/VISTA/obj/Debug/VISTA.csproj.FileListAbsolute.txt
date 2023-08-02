@@ -189,3 +189,4 @@ C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de
 C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmErrorRestoreName.resources
 C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmSuccessfullyBackup.resources
 C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Notifications.frmSuccessfullyRestoreBackup.resources
+C:\Users\delmo\OneDrive\Ing. Sistemas\2 - Segundo Cuatrimestre - 2021\Trabajo de diploma\Teraflop Computacion\Teraflop Computacion\VISTA\obj\Debug\VISTA.Audits.frmLoginLogoutAud.resources
