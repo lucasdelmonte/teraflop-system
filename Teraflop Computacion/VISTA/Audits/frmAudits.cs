@@ -97,6 +97,7 @@ namespace VISTA.Audits
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
+            Clear_Filters();
             Update_CustomerAudDatagrid();
             lblSelected.Text = "customer";
         }
@@ -113,7 +114,6 @@ namespace VISTA.Audits
                     return;
                 }
             }
-
             try
             {
                 if(lblSelected.Text == "customer")
@@ -154,8 +154,33 @@ namespace VISTA.Audits
 
         private void btnLoginLogout_Click(object sender, EventArgs e)
         {
+            Clear_Filters();
             Update_LoginLogoutAudDatagrid();
             lblSelected.Text = "login/logout";
+        }
+
+        public void Clear_Filters()
+        {
+            txtCustomerName.Text = "";
+            txtDateFrom.Text = "";
+            txtDateUntil.Text = "";
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            if (cbApplyFilterDates.Checked)
+            {
+                DateTime dateFrom;
+                if (!DateTime.TryParse(txtDateFrom.Text, out dateFrom))
+                {
+                    dateFrom = DateTime.MinValue;
+                }
+                DateTime dateUntil;
+                if (!DateTime.TryParse(txtDateUntil.Text, out dateUntil))
+                {
+                    dateUntil = DateTime.MinValue;
+                }
+            }
         }
     }
 }

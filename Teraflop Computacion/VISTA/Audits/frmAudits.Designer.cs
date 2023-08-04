@@ -41,6 +41,16 @@ namespace VISTA.Audits
             this.iconCompress = new System.Windows.Forms.PictureBox();
             this.iconClose = new System.Windows.Forms.PictureBox();
             this.gbAudits = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblUntil = new System.Windows.Forms.Label();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.txtDateUntil = new System.Windows.Forms.TextBox();
+            this.lineDateUntil = new System.Windows.Forms.PictureBox();
+            this.txtDateFrom = new System.Windows.Forms.TextBox();
+            this.lineDateFrom = new System.Windows.Forms.PictureBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.lineName = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvAudits = new System.Windows.Forms.DataGridView();
             this.btnConsult = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
@@ -51,14 +61,22 @@ namespace VISTA.Audits
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSelected = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnCustomers = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblName = new System.Windows.Forms.Label();
             this.btnLoginLogout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lblSelected = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbApplyFilterDates = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnFilter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
             this.gbAudits.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lineDateUntil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineDateFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAudits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -111,6 +129,7 @@ namespace VISTA.Audits
             // 
             // gbAudits
             // 
+            this.gbAudits.Controls.Add(this.groupBox2);
             this.gbAudits.Controls.Add(this.dgvAudits);
             this.gbAudits.Controls.Add(this.btnConsult);
             this.gbAudits.Controls.Add(this.dgvProduct);
@@ -124,6 +143,133 @@ namespace VISTA.Audits
             this.gbAudits.TabIndex = 102;
             this.gbAudits.TabStop = false;
             this.gbAudits.Text = "Audits";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnFilter);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cbApplyFilterDates);
+            this.groupBox2.Controls.Add(this.lblUntil);
+            this.groupBox2.Controls.Add(this.lblFrom);
+            this.groupBox2.Controls.Add(this.txtDateUntil);
+            this.groupBox2.Controls.Add(this.lineDateUntil);
+            this.groupBox2.Controls.Add(this.txtDateFrom);
+            this.groupBox2.Controls.Add(this.lineDateFrom);
+            this.groupBox2.Controls.Add(this.txtCustomerName);
+            this.groupBox2.Controls.Add(this.lineName);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Alata", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.Location = new System.Drawing.Point(6, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(901, 106);
+            this.groupBox2.TabIndex = 123;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filters";
+            // 
+            // lblUntil
+            // 
+            this.lblUntil.AutoSize = true;
+            this.lblUntil.Font = new System.Drawing.Font("Alata", 12F);
+            this.lblUntil.ForeColor = System.Drawing.Color.Black;
+            this.lblUntil.Location = new System.Drawing.Point(700, 28);
+            this.lblUntil.Name = "lblUntil";
+            this.lblUntil.Size = new System.Drawing.Size(49, 27);
+            this.lblUntil.TabIndex = 112;
+            this.lblUntil.Text = "Until:";
+            this.lblUntil.Visible = false;
+            // 
+            // lblFrom
+            // 
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Font = new System.Drawing.Font("Alata", 12F);
+            this.lblFrom.ForeColor = System.Drawing.Color.Black;
+            this.lblFrom.Location = new System.Drawing.Point(504, 28);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(52, 27);
+            this.lblFrom.TabIndex = 111;
+            this.lblFrom.Text = "From:";
+            this.lblFrom.Visible = false;
+            // 
+            // txtDateUntil
+            // 
+            this.txtDateUntil.BackColor = System.Drawing.Color.DarkGray;
+            this.txtDateUntil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDateUntil.Font = new System.Drawing.Font("Alata", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateUntil.ForeColor = System.Drawing.Color.Black;
+            this.txtDateUntil.Location = new System.Drawing.Point(753, 28);
+            this.txtDateUntil.Name = "txtDateUntil";
+            this.txtDateUntil.Size = new System.Drawing.Size(132, 23);
+            this.txtDateUntil.TabIndex = 109;
+            this.txtDateUntil.Visible = false;
+            // 
+            // lineDateUntil
+            // 
+            this.lineDateUntil.Image = ((System.Drawing.Image)(resources.GetObject("lineDateUntil.Image")));
+            this.lineDateUntil.Location = new System.Drawing.Point(749, 48);
+            this.lineDateUntil.Name = "lineDateUntil";
+            this.lineDateUntil.Size = new System.Drawing.Size(146, 10);
+            this.lineDateUntil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.lineDateUntil.TabIndex = 110;
+            this.lineDateUntil.TabStop = false;
+            this.lineDateUntil.Visible = false;
+            // 
+            // txtDateFrom
+            // 
+            this.txtDateFrom.BackColor = System.Drawing.Color.DarkGray;
+            this.txtDateFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDateFrom.Font = new System.Drawing.Font("Alata", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateFrom.ForeColor = System.Drawing.Color.Black;
+            this.txtDateFrom.Location = new System.Drawing.Point(562, 28);
+            this.txtDateFrom.Name = "txtDateFrom";
+            this.txtDateFrom.Size = new System.Drawing.Size(132, 23);
+            this.txtDateFrom.TabIndex = 107;
+            this.txtDateFrom.Visible = false;
+            // 
+            // lineDateFrom
+            // 
+            this.lineDateFrom.Image = ((System.Drawing.Image)(resources.GetObject("lineDateFrom.Image")));
+            this.lineDateFrom.Location = new System.Drawing.Point(558, 48);
+            this.lineDateFrom.Name = "lineDateFrom";
+            this.lineDateFrom.Size = new System.Drawing.Size(146, 10);
+            this.lineDateFrom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.lineDateFrom.TabIndex = 108;
+            this.lineDateFrom.TabStop = false;
+            this.lineDateFrom.Visible = false;
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.BackColor = System.Drawing.Color.DarkGray;
+            this.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomerName.Font = new System.Drawing.Font("Alata", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.ForeColor = System.Drawing.Color.Black;
+            this.txtCustomerName.Location = new System.Drawing.Point(73, 28);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(132, 23);
+            this.txtCustomerName.TabIndex = 105;
+            // 
+            // lineName
+            // 
+            this.lineName.Image = ((System.Drawing.Image)(resources.GetObject("lineName.Image")));
+            this.lineName.Location = new System.Drawing.Point(69, 48);
+            this.lineName.Name = "lineName";
+            this.lineName.Size = new System.Drawing.Size(146, 10);
+            this.lineName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.lineName.TabIndex = 106;
+            this.lineName.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Alata", 12F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(6, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 27);
+            this.label1.TabIndex = 102;
             // 
             // dgvAudits
             // 
@@ -159,7 +305,7 @@ namespace VISTA.Audits
             this.dgvAudits.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAudits.EnableHeadersVisualStyles = false;
             this.dgvAudits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(216)))), ((int)(((byte)(208)))));
-            this.dgvAudits.Location = new System.Drawing.Point(6, 27);
+            this.dgvAudits.Location = new System.Drawing.Point(6, 139);
             this.dgvAudits.Name = "dgvAudits";
             this.dgvAudits.ReadOnly = true;
             this.dgvAudits.RowHeadersVisible = false;
@@ -169,7 +315,7 @@ namespace VISTA.Audits
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(25)))));
             this.dgvAudits.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAudits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAudits.Size = new System.Drawing.Size(901, 466);
+            this.dgvAudits.Size = new System.Drawing.Size(901, 354);
             this.dgvAudits.TabIndex = 122;
             // 
             // btnConsult
@@ -282,7 +428,7 @@ namespace VISTA.Audits
             // dgvClients
             // 
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClients.Location = new System.Drawing.Point(25, 57);
+            this.dgvClients.Location = new System.Drawing.Point(25, 108);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.Size = new System.Drawing.Size(309, 150);
             this.dgvClients.TabIndex = 109;
@@ -338,6 +484,18 @@ namespace VISTA.Audits
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(186, 583);
             this.panel1.TabIndex = 124;
+            // 
+            // lblSelected
+            // 
+            this.lblSelected.AutoSize = true;
+            this.lblSelected.Font = new System.Drawing.Font("Alata", 12F);
+            this.lblSelected.ForeColor = System.Drawing.Color.White;
+            this.lblSelected.Location = new System.Drawing.Point(3, 550);
+            this.lblSelected.Name = "lblSelected";
+            this.lblSelected.Size = new System.Drawing.Size(73, 27);
+            this.lblSelected.TabIndex = 62;
+            this.lblSelected.Text = "Selected";
+            this.lblSelected.Visible = false;
             // 
             // btnCustomers
             // 
@@ -425,16 +583,77 @@ namespace VISTA.Audits
             this.btnLoginLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnLoginLogout.Click += new System.EventHandler(this.btnLoginLogout_Click);
             // 
-            // lblSelected
+            // cbApplyFilterDates
             // 
-            this.lblSelected.AutoSize = true;
-            this.lblSelected.Font = new System.Drawing.Font("Alata", 12F);
-            this.lblSelected.ForeColor = System.Drawing.Color.White;
-            this.lblSelected.Location = new System.Drawing.Point(3, 550);
-            this.lblSelected.Name = "lblSelected";
-            this.lblSelected.Size = new System.Drawing.Size(73, 27);
-            this.lblSelected.TabIndex = 62;
-            this.lblSelected.Text = "Selected";
+            this.cbApplyFilterDates.AutoSize = true;
+            this.cbApplyFilterDates.Location = new System.Drawing.Point(730, 70);
+            this.cbApplyFilterDates.Name = "cbApplyFilterDates";
+            this.cbApplyFilterDates.Size = new System.Drawing.Size(165, 28);
+            this.cbApplyFilterDates.TabIndex = 113;
+            this.cbApplyFilterDates.Text = "Apply filter by dates";
+            this.cbApplyFilterDates.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Alata", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(7, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 27);
+            this.label2.TabIndex = 114;
+            this.label2.Text = "Name:";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Alata", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(392, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 27);
+            this.label3.TabIndex = 115;
+            this.label3.Text = "Dates range:";
+            this.label3.Visible = false;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFilter.BorderRadius = 0;
+            this.btnFilter.ButtonText = "Filter";
+            this.btnFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFilter.DisabledColor = System.Drawing.Color.Gray;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnFilter.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnFilter.Iconimage = null;
+            this.btnFilter.Iconimage_right = null;
+            this.btnFilter.Iconimage_right_Selected = null;
+            this.btnFilter.Iconimage_Selected = null;
+            this.btnFilter.IconMarginLeft = 0;
+            this.btnFilter.IconMarginRight = 0;
+            this.btnFilter.IconRightVisible = true;
+            this.btnFilter.IconRightZoom = 0D;
+            this.btnFilter.IconVisible = true;
+            this.btnFilter.IconZoom = 90D;
+            this.btnFilter.IsTab = false;
+            this.btnFilter.Location = new System.Drawing.Point(11, 69);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnFilter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnFilter.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnFilter.selected = false;
+            this.btnFilter.Size = new System.Drawing.Size(77, 29);
+            this.btnFilter.TabIndex = 124;
+            this.btnFilter.Text = "Filter";
+            this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnFilter.Textcolor = System.Drawing.Color.White;
+            this.btnFilter.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // frmAudits
             // 
@@ -455,6 +674,11 @@ namespace VISTA.Audits
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).EndInit();
             this.gbAudits.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lineDateUntil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineDateFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lineName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAudits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
@@ -486,5 +710,19 @@ namespace VISTA.Audits
         private Bunifu.Framework.UI.BunifuFlatButton btnCustomers;
         private System.Windows.Forms.Label lblName;
         private Bunifu.Framework.UI.BunifuCustomLabel lblSelected;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDateUntil;
+        private System.Windows.Forms.PictureBox lineDateUntil;
+        private System.Windows.Forms.TextBox txtDateFrom;
+        private System.Windows.Forms.PictureBox lineDateFrom;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.PictureBox lineName;
+        private System.Windows.Forms.Label lblUntil;
+        private System.Windows.Forms.Label lblFrom;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cbApplyFilterDates;
+        private Bunifu.Framework.UI.BunifuFlatButton btnFilter;
     }
 }

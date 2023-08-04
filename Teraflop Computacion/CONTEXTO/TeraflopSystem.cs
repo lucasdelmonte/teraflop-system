@@ -320,5 +320,26 @@ namespace CONTEXTO
             return Products.Count(x => x.Barcode== oProduct.Barcode);
         }
         #endregion
+
+        #region filter audits
+        public System.Collections.IEnumerable Get_LoginLogout_Audit(string name, bool applyFilter, DateTime dateFrom, DateTime dateUntil)
+        {
+            var operaciones = from operacion in LoginLogoutAud
+                              where (name != "" ? operacion.Name == name : true)
+                              && (applyFilter && dateFrom != DateTime.MinValue ? operacion.AudFandH >= dateFrom : true)
+                              && (applyFilter && dateUntil != DateTime.MinValue ? operacion.AudFandH <= dateUntil : true)
+                              select new
+                              {
+                                  CODIGO = operacion.CODIGO,
+                                  FECHA = operacion.FECHA,
+                                  CUENTA_NUMERO = operacion.CUENTA.CODIGO,
+                                  TITULAR = operacion.CUENTA.TITULAR.NOMBRE,
+                                  TIPO = operacion.TIPO,
+                                  IMPORTE = operacion.IMPORTE
+                              };
+
+            return operaciones.ToList();
+        }
+        #endregion
     }
 }

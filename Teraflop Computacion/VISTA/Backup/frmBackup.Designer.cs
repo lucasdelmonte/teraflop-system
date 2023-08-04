@@ -39,6 +39,7 @@ namespace VISTA.Backup
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.gbSaveBackup = new System.Windows.Forms.GroupBox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConectar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtBackupName = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@ namespace VISTA.Backup
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
@@ -121,12 +121,12 @@ namespace VISTA.Backup
             // 
             // gbSaveBackup
             // 
-            this.gbSaveBackup.Controls.Add(this.bunifuCustomLabel1);
             this.gbSaveBackup.Controls.Add(this.label2);
             this.gbSaveBackup.Controls.Add(this.btnConectar);
             this.gbSaveBackup.Controls.Add(this.txtBackupName);
             this.gbSaveBackup.Controls.Add(this.pictureBox4);
             this.gbSaveBackup.Controls.Add(this.label3);
+            this.gbSaveBackup.Controls.Add(this.bunifuCustomLabel1);
             this.gbSaveBackup.Font = new System.Drawing.Font("Alata", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSaveBackup.ForeColor = System.Drawing.Color.Black;
             this.gbSaveBackup.Location = new System.Drawing.Point(12, 110);
@@ -135,6 +135,16 @@ namespace VISTA.Backup
             this.gbSaveBackup.TabIndex = 102;
             this.gbSaveBackup.TabStop = false;
             this.gbSaveBackup.Text = "Create backup";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(193, 24);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(147, 24);
+            this.bunifuCustomLabel1.TabIndex = 117;
+            this.bunifuCustomLabel1.Text = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Visible = false;
             // 
             // label2
             // 
@@ -378,15 +388,6 @@ namespace VISTA.Backup
             this.btnBack.Textcolor = System.Drawing.Color.White;
             this.btnBack.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(191, 69);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(147, 24);
-            this.bunifuCustomLabel1.TabIndex = 117;
-            this.bunifuCustomLabel1.Text = "bunifuCustomLabel1";
             // 
             // frmBackup
             // 
