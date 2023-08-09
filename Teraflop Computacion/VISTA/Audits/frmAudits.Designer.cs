@@ -69,6 +69,7 @@ namespace VISTA.Audits
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFilter = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnClearFilters = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
@@ -148,6 +149,7 @@ namespace VISTA.Audits
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnClearFilters);
             this.groupBox2.Controls.Add(this.btnFilter);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
@@ -180,7 +182,6 @@ namespace VISTA.Audits
             this.lblUntil.Size = new System.Drawing.Size(49, 27);
             this.lblUntil.TabIndex = 112;
             this.lblUntil.Text = "Until:";
-            this.lblUntil.Visible = false;
             // 
             // lblFrom
             // 
@@ -192,7 +193,6 @@ namespace VISTA.Audits
             this.lblFrom.Size = new System.Drawing.Size(52, 27);
             this.lblFrom.TabIndex = 111;
             this.lblFrom.Text = "From:";
-            this.lblFrom.Visible = false;
             // 
             // txtDateUntil
             // 
@@ -204,7 +204,6 @@ namespace VISTA.Audits
             this.txtDateUntil.Name = "txtDateUntil";
             this.txtDateUntil.Size = new System.Drawing.Size(132, 23);
             this.txtDateUntil.TabIndex = 109;
-            this.txtDateUntil.Visible = false;
             // 
             // lineDateUntil
             // 
@@ -215,7 +214,6 @@ namespace VISTA.Audits
             this.lineDateUntil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.lineDateUntil.TabIndex = 110;
             this.lineDateUntil.TabStop = false;
-            this.lineDateUntil.Visible = false;
             // 
             // txtDateFrom
             // 
@@ -227,7 +225,6 @@ namespace VISTA.Audits
             this.txtDateFrom.Name = "txtDateFrom";
             this.txtDateFrom.Size = new System.Drawing.Size(132, 23);
             this.txtDateFrom.TabIndex = 107;
-            this.txtDateFrom.Visible = false;
             // 
             // lineDateFrom
             // 
@@ -238,7 +235,6 @@ namespace VISTA.Audits
             this.lineDateFrom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.lineDateFrom.TabIndex = 108;
             this.lineDateFrom.TabStop = false;
-            this.lineDateFrom.Visible = false;
             // 
             // txtCustomerName
             // 
@@ -603,7 +599,6 @@ namespace VISTA.Audits
             this.label2.Size = new System.Drawing.Size(60, 27);
             this.label2.TabIndex = 114;
             this.label2.Text = "Name:";
-            this.label2.Visible = false;
             // 
             // label3
             // 
@@ -615,7 +610,6 @@ namespace VISTA.Audits
             this.label3.Size = new System.Drawing.Size(106, 27);
             this.label3.TabIndex = 115;
             this.label3.Text = "Dates range:";
-            this.label3.Visible = false;
             // 
             // btnFilter
             // 
@@ -647,13 +641,51 @@ namespace VISTA.Audits
             this.btnFilter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnFilter.OnHoverTextColor = System.Drawing.Color.White;
             this.btnFilter.selected = false;
-            this.btnFilter.Size = new System.Drawing.Size(77, 29);
+            this.btnFilter.Size = new System.Drawing.Size(104, 29);
             this.btnFilter.TabIndex = 124;
             this.btnFilter.Text = "Filter";
             this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFilter.Textcolor = System.Drawing.Color.White;
             this.btnFilter.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // btnClearFilters
+            // 
+            this.btnClearFilters.Activecolor = System.Drawing.Color.Crimson;
+            this.btnClearFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearFilters.BackColor = System.Drawing.Color.Crimson;
+            this.btnClearFilters.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClearFilters.BorderRadius = 0;
+            this.btnClearFilters.ButtonText = "Clear filters";
+            this.btnClearFilters.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearFilters.DisabledColor = System.Drawing.Color.Gray;
+            this.btnClearFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnClearFilters.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnClearFilters.Iconimage = null;
+            this.btnClearFilters.Iconimage_right = null;
+            this.btnClearFilters.Iconimage_right_Selected = null;
+            this.btnClearFilters.Iconimage_Selected = null;
+            this.btnClearFilters.IconMarginLeft = 0;
+            this.btnClearFilters.IconMarginRight = 0;
+            this.btnClearFilters.IconRightVisible = true;
+            this.btnClearFilters.IconRightZoom = 0D;
+            this.btnClearFilters.IconVisible = true;
+            this.btnClearFilters.IconZoom = 90D;
+            this.btnClearFilters.IsTab = false;
+            this.btnClearFilters.Location = new System.Drawing.Point(121, 69);
+            this.btnClearFilters.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnClearFilters.Name = "btnClearFilters";
+            this.btnClearFilters.Normalcolor = System.Drawing.Color.Crimson;
+            this.btnClearFilters.OnHovercolor = System.Drawing.Color.Red;
+            this.btnClearFilters.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnClearFilters.selected = false;
+            this.btnClearFilters.Size = new System.Drawing.Size(104, 29);
+            this.btnClearFilters.TabIndex = 125;
+            this.btnClearFilters.Text = "Clear filters";
+            this.btnClearFilters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClearFilters.Textcolor = System.Drawing.Color.White;
+            this.btnClearFilters.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearFilters.Click += new System.EventHandler(this.btnClearFilters_Click);
             // 
             // frmAudits
             // 
@@ -670,6 +702,7 @@ namespace VISTA.Audits
             this.Name = "frmAudits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Audits";
+            this.Load += new System.EventHandler(this.frmAudits_Load);
             this.pnTopBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconCompress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconClose)).EndInit();
@@ -724,5 +757,6 @@ namespace VISTA.Audits
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbApplyFilterDates;
         private Bunifu.Framework.UI.BunifuFlatButton btnFilter;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClearFilters;
     }
 }

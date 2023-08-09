@@ -29,7 +29,7 @@ namespace VISTA.Audits
 
             txtCodAudit.Text = oCustomerAud.Cod_CustomerAud.ToString();
             txtUser.Text = oCustomerAud.AudUsuario.ToString();
-            txtDateHour.Text = oCustomerAud.AudFandH;
+            txtDateHour.Text = oCustomerAud.AudFandH.ToString();
             txtAction.Text = oCustomerAud.AudAction.ToString();
 
             txtCodCustomer.Text = oCustomerAud.Cod_Customer.ToString();

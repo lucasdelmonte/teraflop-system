@@ -27,7 +27,7 @@ namespace VISTA.Audits
 
             txtCodAudit.Text = oLoginLogoutAud.Cod_LoginLogoutAud.ToString();
             txtUser.Text = oLoginLogoutAud.AudUsuario.ToString();
-            txtDateHour.Text = oLoginLogoutAud.AudFandH;
+            txtDateHour.Text = oLoginLogoutAud.AudFandH.ToString();
             txtAction.Text = oLoginLogoutAud.AudAction.ToString();
 
             txtCodUser.Text = oLoginLogoutAud.Cod_User.ToString();

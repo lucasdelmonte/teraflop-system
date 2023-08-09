@@ -144,7 +144,7 @@ namespace VISTA
             oLoginLogoutAud.AudUsuario = oUser.Username;
             DateTime date = DateTime.Now;
             string finalDate = date.ToString("g", CultureInfo.CreateSpecificCulture("en-US"));
-            oLoginLogoutAud.AudFandH = finalDate;
+            oLoginLogoutAud.AudFandH = DateTime.Parse(finalDate);
             oLoginLogoutAud.AudAction = "Logout";
             cLoginLogoutAuds.Add_LoginLogoutAud(oLoginLogoutAud);
         }
@@ -570,8 +570,10 @@ namespace VISTA
                 frmAudits formAudits = new frmAudits();
                 formAudits.ShowDialog();
             }
-            catch (Exception)
+            catch (Exception err)
             {
+                MessageBox.Show(err.Message, "Title", MessageBoxButtons.OK);
+                return;
                 DialogResult result = new DialogResult();
                 frmErrorUnexpected formErrorUnexpected = new frmErrorUnexpected();
                 result = formErrorUnexpected.ShowDialog();

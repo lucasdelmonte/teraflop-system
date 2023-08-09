@@ -206,7 +206,7 @@ namespace VISTA
                         oCustomerAud.AudAction = "Delete";
                         DateTime date = DateTime.Now;
                         string finalDate = date.ToString("g", CultureInfo.CreateSpecificCulture("en-US"));
-                        oCustomerAud.AudFandH = finalDate;
+                        oCustomerAud.AudFandH = DateTime.Parse(finalDate);
                         cCustomerAuds.Add_CustomerAud(oCustomerAud);
                         Update_Datagrid();
                     }

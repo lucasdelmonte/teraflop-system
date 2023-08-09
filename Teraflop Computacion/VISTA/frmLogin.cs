@@ -102,7 +102,7 @@ namespace VISTA
                     oLoginLogoutAud.AudUsuario = oUser.Username;
                     DateTime date = DateTime.Now;
                     string finalDate = date.ToString("g", CultureInfo.CreateSpecificCulture("en-US"));
-                    oLoginLogoutAud.AudFandH = finalDate;
+                    oLoginLogoutAud.AudFandH = DateTime.Parse(finalDate);
                     oLoginLogoutAud.AudAction = "Login";
                     cLoginLogoutAuds.Add_LoginLogoutAud(oLoginLogoutAud);
 

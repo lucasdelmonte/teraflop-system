@@ -164,22 +164,65 @@ namespace VISTA.Audits
             txtCustomerName.Text = "";
             txtDateFrom.Text = "";
             txtDateUntil.Text = "";
+            cbApplyFilterDates.Checked = false;
         }
 
+        DateTime dateFrom;
+        DateTime dateUntil;
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtCustomerName.Text))
+            {
+                DialogResult result = new DialogResult();
+                frmErrorIncorrect formError = new frmErrorIncorrect();
+                result = formError.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    txtCustomerName.Focus();
+                    return;
+                }
+            }
             if (cbApplyFilterDates.Checked)
             {
-                DateTime dateFrom;
                 if (!DateTime.TryParse(txtDateFrom.Text, out dateFrom))
                 {
                     dateFrom = DateTime.MinValue;
                 }
-                DateTime dateUntil;
                 if (!DateTime.TryParse(txtDateUntil.Text, out dateUntil))
                 {
                     dateUntil = DateTime.MinValue;
                 }
+            }
+            if (lblSelected.Text == "customer")
+            {
+                dgvAudits.DataSource = null;
+                dgvAudits.DataSource = ctxTeraflop.Get_Customer_Audit(txtCustomerName.Text, cbApplyFilterDates.Checked, dateFrom, dateUntil);
+            }
+            if (lblSelected.Text == "login/logout")
+            {
+                dgvAudits.DataSource = null;
+                dgvAudits.DataSource = ctxTeraflop.Get_LoginLogout_Audit(txtCustomerName.Text, cbApplyFilterDates.Checked, dateFrom, dateUntil);
+                dgvAudits.Columns[0].Visible = false;
+                dgvAudits.Columns[1].Visible = false;
+                dgvAudits.Columns[4].Visible = false;
+            }
+        }
+
+        private void frmAudits_Load(object sender, EventArgs e)
+        {
+            lblSelected.Text = "login/logout";
+            Update_LoginLogoutAudDatagrid();
+        }
+
+        private void btnClearFilters_Click(object sender, EventArgs e)
+        {
+            if (lblSelected.Text == "customer")
+            {
+                Update_CustomerAudDatagrid();  
+            }
+            if (lblSelected.Text == "login/logout")
+            {
+                Update_LoginLogoutAudDatagrid();
             }
         }
     }

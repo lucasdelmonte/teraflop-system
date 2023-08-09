@@ -15,7 +15,7 @@ namespace MODELO
         public string LastName { get; set; }
         public string Role { get; set; }
         public string AudUsuario { get; set; }
-        public string AudFandH { get; set; }
+        public DateTime AudFandH { get; set; }
         public string AudAction { get; set; }
         #endregion
     }

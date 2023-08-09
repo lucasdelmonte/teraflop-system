@@ -201,6 +201,10 @@
     <Compile Include="Migrations\202302062317256_initial32.designer.cs">
       <DependentUpon>202302062317256_initial32.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308042015136_initial33.cs" />
+    <Compile Include="Migrations\202308042015136_initial33.designer.cs">
+      <DependentUpon>202308042015136_initial33.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeraflopSystem.cs" />
@@ -311,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302062317256_initial32.resx">
       <DependentUpon>202302062317256_initial32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308042015136_initial33.resx">
+      <DependentUpon>202308042015136_initial33.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

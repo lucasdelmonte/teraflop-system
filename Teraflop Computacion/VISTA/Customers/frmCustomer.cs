@@ -148,7 +148,7 @@ namespace VISTA.Customers
                 oCustomerAud.AudUsuario = "Code: " + oUser.Cod_User + " - " + oUser.Name +" "+ oUser.LastName;
                 DateTime date = DateTime.Now;
                 string finalDate = date.ToString("g", CultureInfo.CreateSpecificCulture("en-US"));
-                oCustomerAud.AudFandH = finalDate;
+                oCustomerAud.AudFandH = DateTime.Parse(finalDate);
 
                 if (ACTION == MODELO.ACTION.ADD)
                 {

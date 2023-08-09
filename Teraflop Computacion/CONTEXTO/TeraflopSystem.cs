@@ -11,6 +11,8 @@ namespace CONTEXTO
     {
         private List<MODELO.Customer> ListCustomers { get; set; }
         private List<MODELO.Product> ListProducts { get; set; }
+        private List<MODELO.LoginLogoutAud> ListLoginLogoutAud { get; set; }
+        private List<MODELO.CustomerAud> ListCustomerAud { get; set; }
 
         #region Genero la creación del contexto a partir del patrón Singleton
         private static TeraflopSystem instancia;
@@ -28,6 +30,8 @@ namespace CONTEXTO
         {
             ListCustomers = new List<MODELO.Customer>(0);
             ListProducts = new List<MODELO.Product>(0);
+            ListLoginLogoutAud = new List<MODELO.LoginLogoutAud>(0);
+            ListCustomerAud = new List<MODELO.CustomerAud>(0);
         }
 
         public virtual DbSet<MODELO.User> Users { get; set; }
@@ -324,21 +328,82 @@ namespace CONTEXTO
         #region filter audits
         public System.Collections.IEnumerable Get_LoginLogout_Audit(string name, bool applyFilter, DateTime dateFrom, DateTime dateUntil)
         {
-            var operaciones = from operacion in LoginLogoutAud
-                              where (name != "" ? operacion.Name == name : true)
-                              && (applyFilter && dateFrom != DateTime.MinValue ? operacion.AudFandH >= dateFrom : true)
-                              && (applyFilter && dateUntil != DateTime.MinValue ? operacion.AudFandH <= dateUntil : true)
+            ListLoginLogoutAud.Clear();
+
+            var operations = (from operation in LoginLogoutAud
+                              where (name != "" ? operation.Name == name : true)
+                              && (applyFilter && dateFrom != DateTime.MinValue ? operation.AudFandH >= dateFrom : true)
+                              && (applyFilter && dateUntil != DateTime.MinValue ? operation.AudFandH <= dateUntil : true)
                               select new
                               {
-                                  CODIGO = operacion.CODIGO,
-                                  FECHA = operacion.FECHA,
-                                  CUENTA_NUMERO = operacion.CUENTA.CODIGO,
-                                  TITULAR = operacion.CUENTA.TITULAR.NOMBRE,
-                                  TIPO = operacion.TIPO,
-                                  IMPORTE = operacion.IMPORTE
-                              };
+                                  Cod_Aud = operation.Cod_LoginLogoutAud,
+                                  Cod_User = operation.Cod_User,
+                                  Name= operation.Name,
+                                  LastName = operation.LastName,
+                                  Role = operation.Role,
+                                  User = operation.AudUsuario,
+                                  FandH = operation.AudFandH,
+                                  Action = operation.AudAction
+                              }).AsNoTracking();
 
-            return operaciones.ToList();
+            foreach (var audit in operations)
+            {
+                var item = new MODELO.LoginLogoutAud()
+                {
+                    Cod_LoginLogoutAud = audit.Cod_Aud,
+                    Cod_User = audit.Cod_User,
+                    Name = audit.Name,
+                    LastName = audit.LastName,
+                    Role = audit.Role,
+                    AudUsuario = audit.User,
+                    AudFandH = audit.FandH,
+                    AudAction = audit.Action
+                };
+                ListLoginLogoutAud.Add(item);
+            }
+            return ListLoginLogoutAud;
+        }
+        public System.Collections.IEnumerable Get_Customer_Audit(string name, bool applyFilter, DateTime dateFrom, DateTime dateUntil)
+        {
+            ListCustomerAud.Clear();
+
+            var operations = (from operation in CustomersAud
+                               where (name != "" ? operation.Name == name : true)
+                               && (applyFilter && dateFrom != DateTime.MinValue ? operation.AudFandH >= dateFrom : true)
+                               && (applyFilter && dateUntil != DateTime.MinValue ? operation.AudFandH <= dateUntil : true)
+                               select new
+                               {
+                                   Cod_CustomerAud = operation.Cod_CustomerAud,
+                                   Cod_Customer = operation.Cod_Customer,
+                                   Name = operation.Name,
+                                   LastName = operation.LastName,
+                                   Email = operation.Email,
+                                   Direction = operation.Direction,
+                                   Telephone = operation.Telephone,
+                                   User = operation.AudUsuario,
+                                   FandH = operation.AudFandH,
+                                   Action = operation.AudAction
+
+                               }).AsNoTracking();
+
+            foreach (var audit in operations)
+            {
+                var item = new MODELO.CustomerAud()
+                {
+                    Cod_CustomerAud = audit.Cod_CustomerAud,
+                    Cod_Customer = audit.Cod_Customer,
+                    Name = audit.Name,
+                    LastName = audit.LastName,
+                    Email = audit.Email,
+                    Direction = audit.Direction,
+                    Telephone = audit.Telephone,
+                    AudAction = audit.Action,
+                    AudUsuario = audit.User,
+                    AudFandH = audit.FandH
+                };
+                ListCustomerAud.Add(item);
+            }
+            return ListCustomerAud;
         }
         #endregion
     }

@@ -56,6 +56,7 @@ namespace VISTA
             this.btnShopping = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbSelected = new System.Windows.Forms.PictureBox();
             this.topBar = new System.Windows.Forms.Panel();
+            this.btnBackup = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAudits = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbIconTitle = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@ namespace VISTA
             this.AnimacionSidebar1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.AnimacionSidebar2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.trLoad = new System.Windows.Forms.Timer(this.components);
-            this.btnBackup = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelected)).BeginInit();
             this.topBar.SuspendLayout();
@@ -189,7 +189,7 @@ namespace VISTA
             this.btnReports.BackColor = System.Drawing.Color.Transparent;
             this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReports.BorderRadius = 0;
-            this.btnReports.ButtonText = "       Reports";
+            this.btnReports.ButtonText = "    Reports";
             this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnimacionSidebar1.SetDecoration(this.btnReports, BunifuAnimatorNS.DecorationType.None);
             this.AnimacionSidebar2.SetDecoration(this.btnReports, BunifuAnimatorNS.DecorationType.None);
@@ -212,9 +212,9 @@ namespace VISTA
             this.btnReports.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnReports.OnHoverTextColor = System.Drawing.Color.White;
             this.btnReports.selected = false;
-            this.btnReports.Size = new System.Drawing.Size(139, 37);
+            this.btnReports.Size = new System.Drawing.Size(131, 37);
             this.btnReports.TabIndex = 56;
-            this.btnReports.Text = "       Reports";
+            this.btnReports.Text = "    Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReports.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(206)))));
             this.btnReports.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -480,7 +480,7 @@ namespace VISTA
             this.btnCustomers.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnCustomers.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCustomers.selected = false;
-            this.btnCustomers.Size = new System.Drawing.Size(139, 37);
+            this.btnCustomers.Size = new System.Drawing.Size(133, 37);
             this.btnCustomers.TabIndex = 41;
             this.btnCustomers.Text = "     Customers";
             this.btnCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,7 +640,7 @@ namespace VISTA
             this.btnProviders.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnProviders.OnHoverTextColor = System.Drawing.Color.White;
             this.btnProviders.selected = false;
-            this.btnProviders.Size = new System.Drawing.Size(139, 37);
+            this.btnProviders.Size = new System.Drawing.Size(133, 37);
             this.btnProviders.TabIndex = 43;
             this.btnProviders.Text = "       Providers";
             this.btnProviders.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -680,7 +680,7 @@ namespace VISTA
             this.btnSales.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnSales.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSales.selected = false;
-            this.btnSales.Size = new System.Drawing.Size(130, 37);
+            this.btnSales.Size = new System.Drawing.Size(125, 37);
             this.btnSales.TabIndex = 45;
             this.btnSales.Text = "       Sales";
             this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -720,7 +720,7 @@ namespace VISTA
             this.btnShopping.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnShopping.OnHoverTextColor = System.Drawing.Color.White;
             this.btnShopping.selected = false;
-            this.btnShopping.Size = new System.Drawing.Size(139, 37);
+            this.btnShopping.Size = new System.Drawing.Size(125, 37);
             this.btnShopping.TabIndex = 47;
             this.btnShopping.Text = "     Buys";
             this.btnShopping.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -757,6 +757,46 @@ namespace VISTA
             this.topBar.Size = new System.Drawing.Size(1011, 33);
             this.topBar.TabIndex = 0;
             this.topBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnTopBar_MouseMove);
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.Activecolor = System.Drawing.Color.Transparent;
+            this.btnBackup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackup.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBackup.BorderRadius = 0;
+            this.btnBackup.ButtonText = " Backup";
+            this.btnBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimacionSidebar1.SetDecoration(this.btnBackup, BunifuAnimatorNS.DecorationType.None);
+            this.AnimacionSidebar2.SetDecoration(this.btnBackup, BunifuAnimatorNS.DecorationType.None);
+            this.btnBackup.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBackup.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBackup.Iconimage = null;
+            this.btnBackup.Iconimage_right = null;
+            this.btnBackup.Iconimage_right_Selected = null;
+            this.btnBackup.Iconimage_Selected = null;
+            this.btnBackup.IconMarginLeft = 0;
+            this.btnBackup.IconMarginRight = 0;
+            this.btnBackup.IconRightVisible = true;
+            this.btnBackup.IconRightZoom = 0D;
+            this.btnBackup.IconVisible = true;
+            this.btnBackup.IconZoom = 80D;
+            this.btnBackup.IsTab = false;
+            this.btnBackup.Location = new System.Drawing.Point(453, 2);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnBackup.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnBackup.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBackup.selected = false;
+            this.btnBackup.Size = new System.Drawing.Size(104, 28);
+            this.btnBackup.TabIndex = 62;
+            this.btnBackup.Text = " Backup";
+            this.btnBackup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBackup.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(206)))));
+            this.btnBackup.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // btnAudits
             // 
@@ -915,46 +955,6 @@ namespace VISTA
             // 
             this.trLoad.Enabled = true;
             this.trLoad.Tick += new System.EventHandler(this.trLoad_Tick);
-            // 
-            // btnBackup
-            // 
-            this.btnBackup.Activecolor = System.Drawing.Color.Transparent;
-            this.btnBackup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBackup.BackColor = System.Drawing.Color.Transparent;
-            this.btnBackup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBackup.BorderRadius = 0;
-            this.btnBackup.ButtonText = " Backup";
-            this.btnBackup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AnimacionSidebar1.SetDecoration(this.btnBackup, BunifuAnimatorNS.DecorationType.None);
-            this.AnimacionSidebar2.SetDecoration(this.btnBackup, BunifuAnimatorNS.DecorationType.None);
-            this.btnBackup.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBackup.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBackup.Iconimage = null;
-            this.btnBackup.Iconimage_right = null;
-            this.btnBackup.Iconimage_right_Selected = null;
-            this.btnBackup.Iconimage_Selected = null;
-            this.btnBackup.IconMarginLeft = 0;
-            this.btnBackup.IconMarginRight = 0;
-            this.btnBackup.IconRightVisible = true;
-            this.btnBackup.IconRightZoom = 0D;
-            this.btnBackup.IconVisible = true;
-            this.btnBackup.IconZoom = 80D;
-            this.btnBackup.IsTab = false;
-            this.btnBackup.Location = new System.Drawing.Point(453, 2);
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnBackup.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btnBackup.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBackup.selected = false;
-            this.btnBackup.Size = new System.Drawing.Size(104, 28);
-            this.btnBackup.TabIndex = 62;
-            this.btnBackup.Text = " Backup";
-            this.btnBackup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBackup.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(206)))));
-            this.btnBackup.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // frmMenu
             // 
